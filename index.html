@@ -19,7 +19,16 @@
     </section>
 
     <section class="main-content">
-      <p>使用了一段时间的Autolayout，今天抽空开始写blog</p>
+      <p>使用了一段时间的Autolayout，今天抽空开始写blog
+1. 布局思维绝对布局和相对布局
+    * 绝对布局是使用屏幕的绝对坐标来绘制和放置开发者的视图控件。iOS绝对布局举例，以屏幕的左上角为坐标轴原点，水平x，竖直为y。设置一个控件的frame（x,y,width,height），这样可以通过确定view的顶点和宽和高，也就能够清楚知道view在屏幕或者父view中的位置了。
+    * 相对布局是通过依赖关系绘制和放置开发者的视图控件。例如 Label1的上边距离父view的20px，左边距离父view20px，高度是父view高的0.2倍，宽度是父view的0.8倍
+     view.x =fatherView.x + 20;
+     view.y = fatherView.y + 20;
+     view.width = fatherView.width * 0.2;
+     view.height = fatherView.height * 0.8;
+这样只要知道fatherView的位置，那么就能够知道view的位置。调整fatherView的位置，view的位置也会跟着变化。
+    由此也就有了苹果autolayout的方案。</p>
 
       <footer class="site-footer">
         <span class="site-footer-owner"><a href="https://github.com/TangGuowei/blog-autolayout">AutoLayout Tips</a> is maintained by <a href="https://github.com/TangGuowei">TangGuowei</a>.</span>
